@@ -18,7 +18,7 @@
   &__new {
     margin-top: $db-header-height;
     padding: 1.5rem;
-    background: #fcfcfc;
+    background: #dadce0;
   }
   &__create {
     width: 160px;
@@ -45,7 +45,7 @@
     margin: 0 auto;
   }
 
-  *__table {
+  &__table {
     padding: 1rem;
   }
 
@@ -80,10 +80,10 @@
       cursor: pointer;
       color: #202124;
       font-size: 14px;
-    }
 
-    &:hover {
-      text-decoration: underline;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
