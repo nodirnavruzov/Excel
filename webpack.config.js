@@ -8,6 +8,7 @@ const isProd = process.env.NODE_ENV === 'production'
 const isDev = !isProd
 
 const filename = ext => (isDev ? `bundle.${ext}` : `bundle.[hash].${ext}`)
+
 const jsLoaders = () => {
   const loaders = [
     {
@@ -35,7 +36,6 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js'],
-
     alias: {
       '@': path.resolve(__dirname, 'src'),
       '@core': path.resolve(__dirname, 'src/core'),
@@ -86,12 +86,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: jsLoaders({
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-          },
-        }),
+        use: jsLoaders(),
       },
     ],
   },

@@ -31,9 +31,10 @@ export function resizeHandler($root, event) {
 
     if (type === 'col') {
       $parent.css({ width: value + 'px' })
+      // prettier-ignore
       $root
-        .findAll(`[data-col="${$parent.data.col}"]`)
-        .forEach(el => (el.style.width = value + 'px'))
+          .findAll(`[data-col="${$parent.data.col}"]`)
+          .forEach(el => (el.style.width = value + 'px'))
     } else {
       $parent.css({ height: value + 'px' })
     }
