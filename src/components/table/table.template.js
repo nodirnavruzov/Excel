@@ -4,7 +4,7 @@ const CODES = {
 }
 function toCell(_, col) {
   return `
-    <div class="column" contenteditable data-col="${col}"></div>
+    <div class="cell" contenteditable data-col="${col}"></div>
     `
 }
 
@@ -37,7 +37,7 @@ function toChar(_, index) {
 export function createTable(rowsCount = 15) {
   const colsCount = CODES.Z - CODES.A + 1
   const rows = []
-  // prettier-ignore
+  //  prettier-ignore
   const cols = new Array(colsCount)
       .fill('')
       .map(toChar)
@@ -45,9 +45,8 @@ export function createTable(rowsCount = 15) {
       .join('')
 
   rows.push(createRow(null, cols))
-
+  //  prettier-ignore
   for (let i = 0; i < rowsCount; i++) {
-    // prettier-ignore
     const cells = new Array(colsCount)
         .fill('')
         .map(toCell)
