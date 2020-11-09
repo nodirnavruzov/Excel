@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import '~normalize.css';
 
 @import 'header';
 @import 'toolbar';
 @import 'formula';
 @import 'table';
-@import 'dashboard.scss';
+@import 'dashboard';
 
 * {
   margin: 0;
