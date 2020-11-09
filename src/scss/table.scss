@@ -15,6 +15,7 @@
     min-height: 20px;
     height: $row-height;
   }
+
   .row-info {
     position: relative;
     display: flex;
@@ -26,6 +27,7 @@
     background: #f8f9fa;
     border-top: none;
   }
+
   .row-data {
     display: flex;
   }
@@ -43,6 +45,7 @@
     border-left: 0;
     height: 100%;
   }
+
   .cell {
     min-width: 40px;
     padding: 5px;
@@ -79,10 +82,12 @@
   .col-resize {
     top: 0;
     width: 4px;
+
     &:hover {
       cursor: col-resize;
     }
   }
+
   .row-resize {
     left: 0;
     height: 4px;
