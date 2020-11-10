@@ -40,13 +40,14 @@ describe('createStore:', () => {
     expect(store.getState().count).toBe(1)
   })
 
-  test('should NOT change state if action  doNOT exists', () => {
+  test('should NOT change state if action do not exists', () => {
     store.dispatch({ type: 'NOT_EXISTING_ACTION' })
     expect(store.getState().count).toBe(0)
   })
 
   test('should call subscriber function', () => {
     store.subscribe(handler)
+
     store.dispatch({ type: 'ADD' })
 
     expect(handler).toHaveBeenCalled()
@@ -55,6 +56,7 @@ describe('createStore:', () => {
 
   test('should NOT call sub if unsubscribe', () => {
     const sub = store.subscribe(handler)
+
     sub.unsubscribe()
 
     store.dispatch({ type: 'ADD' })
@@ -67,6 +69,7 @@ describe('createStore:', () => {
       setTimeout(() => {
         store.dispatch({ type: 'ADD' })
       }, 500)
+
       setTimeout(() => {
         expect(store.getState().count).toBe(1)
         resolve()
