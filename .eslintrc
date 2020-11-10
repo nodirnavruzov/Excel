@@ -16,5 +16,6 @@
     "object-curly-spacing": "off",
     "no-debugger": "off"
   },
+  "plugins": ["jest"],
   "extends": ["eslint:recommended", "google"]
 }
